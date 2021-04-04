@@ -1,0 +1,30 @@
+
+{%load static %}
+{%block content%}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+
+
+
+<form  method="POST" action="{% url 'add' %}" >
+
+ {% csrf_token %}
+
+
+
+ Basic salary:<input type="text" name="sal" required ><br> <br>
+ Allowances:<input type="text" name="allowance" required ><br> <br>
+ 
+
+
+ 
+ <input type="submit" value="Calculate" >
+ 
+
+
+
+
+</form>
+
+{% endblock %}
